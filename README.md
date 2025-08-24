@@ -23,7 +23,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 1. Open Arduino script what you want
 2. Connect the computer, Arduino Leonardo R3, and USB host shield together
 3. Set the board and port under the toos menu, then upload the Arduino script
-you can just use it if mouse works well
+4. you can just use it if mouse works well
 <br></br>
 <br></br>
 <br></br>
@@ -43,6 +43,10 @@ you can just use it if mouse works well
 - 파일 안에는 두가지 버전의 아두이노 스크립트가 있습니다. `RandomDelay_RandomMove.ino`는 PC로부터 좌표를 받고 움직이고 나서 다시 좌표를 받을때 일부러 무작위 딜레이를 걸며 PC에서 좌표가 보내질때 바로 그 좌표로 움직이지 않고
 그 주변으로 움직인뒤에 PC에서 보낸 좌표로 움직여 사람처럼 보이게 합니다. `RandomDelay.ino`는 좌표를 받고 움직이고나서 다시 좌표를 받을때 무작위 딜레이만 걸며 이 모든건 다 변경이 가능합니다 
 <br></br>
+1. 사용하고 싶은 아두이노 스크립트 파일을 여세요
+2. 아두이노 레오나르도 보드, 컴퓨터, USB 호스트쉴드를 서로 연결해주세요
+3. 툴에 있는 보드와 포트 설정을 해주고나서 아두이노 스크립트를 업로드 해주세요
+4. 마우스가 잘 작동된다면 성공!
 <br></br>
 <br></br>
 <br></br>
