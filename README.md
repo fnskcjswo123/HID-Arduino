@@ -62,6 +62,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 <br></br>
 - If your Arduino has issues working in general, try using a different USB port and a better cable. I recommend the one that comes with the Arduino
 <br></br>
+- If this doesn't work, read it all over again slowly
 <br></br>
 <br></br>
 <br></br>
