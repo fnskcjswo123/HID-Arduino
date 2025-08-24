@@ -3,7 +3,7 @@
 HID mouse emulation with ur Arduino + Usb HostShield!
 
 ## ENG
-- before using this you need an `Arduino Leonardo R3(ATmega32u4)` and `soldered Usb HostShield`
+- before using this you need an `Arduino Leonardo R3 ATmega32u4` and `soldered Usb HostShield`
 <br></br>
 - This code was designed for my Glorious Model O mouse, so if it doesn't work with yours, you will need to modify it according to the instructions below
 <br></br>
@@ -66,12 +66,16 @@ it intentionally introduces a random delay and first moves to a nearby location 
 
 ## TroubleShooting
 - If the mouse's polling rate is very low, it may not work well
+- 마우스의 폴링레이트(hz)가 낮다면 잘 작동하지 않을 수 있습니다
 <br></br>
 - If the Arduino script doesn't compile you must check that you're NOT using the Windows Store version of Arduino IDE and you are using the one from the link in the setup tutorial
+- 아두이노 스크립트가 컴파일되지 않는다면 윈도우 스토어 버전 아두이노 IDE를 사용하고 있는게 아닌지 확인하세요
 <br></br>
 - If your Arduino has issues working in general, try using a different USB port and a better cable. I recommend the one that comes with the Arduino
+- 아두이노가 일반적으로 작동하는데 문제가 있다면, 다른 USB 케이블을 사용해보세요(아두이노 살 때 같이 동봉되서 오는 케이블을 사용하는걸 추천합니다)
 <br></br>
 - If this doesn't work, read it all over again slowly
+- 온갖짓을 했는데도 잘 작동하지 않는다면 이걸 다시 처음부터 천천히 읽어보세요 
 <br></br>
 <br></br>
 <br></br>
