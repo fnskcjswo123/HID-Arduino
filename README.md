@@ -1,6 +1,6 @@
 ### HID Arduino Mouse
 
-HID mouse emulation with ur Arduino + Usb HostShield!
+HID mouse emulation with Arduino + Usb HostShield!
 
 ## ENG
 - before using this you need an `Arduino Leonardo R3 ATmega32u4` and `soldered Usb HostShield`
