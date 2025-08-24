@@ -26,6 +26,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 4. you can just use it if mouse works well
 <br></br>
 <br></br>
+### When the mouse doesn't work well
 <br></br>
 <br></br>
 
@@ -48,6 +49,8 @@ it intentionally introduces a random delay and first moves to a nearby location 
 3. 툴에 있는 보드와 포트 설정을 해주고나서 아두이노 스크립트를 업로드 해주세요
 4. 마우스가 잘 작동된다면 성공!
 <br></br>
+<br></br>
+### 그래도 작동이 잘 되지 않을때
 <br></br>
 <br></br>
 <br></br>
