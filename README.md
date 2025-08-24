@@ -25,6 +25,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 3. Set the board and port under the toos menu, then upload the Arduino script
 4. you can just use it if mouse works well
 <br></br>
+<br></br>
 ### When the mouse doesn't work well
 <br></br>
 1. Open `Debug.ino` and upload it
@@ -50,6 +51,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 2. 아두이노 레오나르도 보드, 컴퓨터, USB 호스트쉴드를 서로 연결해주세요
 3. 툴에 있는 보드와 포트 설정을 해주고나서 아두이노 스크립트를 업로드 해주세요
 4. 마우스가 잘 작동된다면 성공!
+<br></br>
 <br></br>
 ### 그래도 작동이 잘 되지 않을때
 <br></br>
