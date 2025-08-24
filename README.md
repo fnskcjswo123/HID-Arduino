@@ -7,7 +7,7 @@ HID mouse emulation with ur Arduino + Usb HostShield!
 <br></br>
 - This code was designed for my Glorious Model O mouse, so if it doesn't work with yours, you will need to modify it according to the instructions below
 <br></br>
--You will need [Arduino IDE version 1.8.19 or higher](https://www.arduino.cc/en/software)(This code was written for version 1.8.19 and might not work correctly on later versions but who don't care)
+-You will need [Arduino IDE version 1.8.19 or higher](https://www.arduino.cc/en/software)(This code was written for version 1.8.19 and might not work correctly on later versions but who cares)
 <br></br>
 - Download and unpack the repository archive to `C:\Users\your_username\Documents\Arduino\libraries\HID_Arduino`
 <br></br>
