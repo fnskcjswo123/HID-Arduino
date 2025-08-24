@@ -13,10 +13,10 @@ HID mouse emulation with ur Arduino + Usb HostShield!
 <br></br>
 - Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`
 <br></br>
-Inside the file, there are two versions of the Arduino script.
-- RandomDelay_RandomMove.ino receives coordinates from the PC, and after moving and when it receives coordinates again, it intentionally adds a random delay. When coordinates are sent from the PC, it doesn't move directly to those coordinates, but moves to its surroundings first, and then moves to the coordinates sent from the PC, making it look like a person.
-<br></br>
-- RandomDelay.ino only adds a random delay after receiving coordinates, moving, and then receiving coordinates again. All of this is all changeable
+- Inside the file, there are two versions of the Arduino script.
+RandomDelay_RandomMove.ino receives coordinates from the PC, and after moving and when it receives coordinates again, it intentionally adds a random delay. When coordinates are sent from the PC, it doesn't move directly to those coordinates, but moves to its surroundings first, and then moves to the coordinates sent from the PC, making it look like a person.
+
+RandomDelay.ino only adds a random delay after receiving coordinates, moving, and then receiving coordinates again. All of this is all changeable
 <br></br>
 <br></br>
 <br></br>
