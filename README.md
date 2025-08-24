@@ -13,6 +13,10 @@ HID mouse emulation with ur Arduino + Usb HostShield!
 <br></br>
 - Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`
 <br></br>
+Inside the file, there are two versions of the Arduino script.
+- RandomDelay_RandomMove.ino receives coordinates from the PC, and after moving and when it receives coordinates again, it intentionally adds a random delay. When coordinates are sent from the PC, it doesn't move directly to those coordinates, but moves to its surroundings first, and then moves to the coordinates sent from the PC, making it look like a person.
+<br></br>
+- RandomDelay.ino only adds a random delay after receiving coordinates, moving, and then receiving coordinates again. All of this is all changeable
 <br></br>
 <br></br>
 <br></br>
@@ -31,9 +35,25 @@ HID mouse emulation with ur Arduino + Usb HostShield!
 <br></br>
 - [이 파일](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0)을 다운받아 압축풀고 `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0` 여기에 이렇게 저장해주세요
 <br></br>
+- 파일 안에는 두가지 버전의 아두이노 스크립트가 있습니다. `RandomDelay_RandomMove.ino`는 PC로부터 좌표를 받고 움직이고 나서 다시 좌표를 받을때 일부러 무작위 딜레이를 걸며 PC에서 좌표가 보내질때 바로 그 좌표로 움직이지 않고
+그 주변으로 움직인뒤에 PC에서 보낸 좌표로 움직여 사람처럼 보이게 합니다. `RandomDelay.ino`는 좌표를 받고 움직이고나서 다시 좌표를 받을때 무작위 딜레이만 걸며 이 모든건 다 변경이 가능합니다 
 <br></br>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
+
+
+
+## TroubleShooting
+- If the mouse's polling rate is very low, it may not work well
+<br></br>
+- If the Arduino script doesn't compile you must check that you're NOT using the Windows Store version of Arduino IDE and you are using the one from the link in the setup tutorial
+<br></br>
+- If your Arduino has issues working in general, try using a different USB port and a better cable. I recommend the one that comes with the Arduino
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
