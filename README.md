@@ -15,13 +15,15 @@ HID mouse emulation with ur Arduino + Usb HostShield!
 <br></br>
 - Inside the file, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs.
 <br></br>
-`RandomDelay_RandomMove.ino`:
-This script receives coordinates from a PC and performs a series of human-like movements. Instead of moving directly to the target coordinates,
+`RandomDelay_RandomMove.ino`: This script receives coordinates from a PC and performs a series of human-like movements. Instead of moving directly to the target coordinates,
 it intentionally introduces a random delay and first moves to a nearby location before moving to the final, specified coordinates. This staged movement is designed to mimic the unpredictable nature of human-like behavior
 <br></br>
-`RandomDelay.ino`:
-In contrast, this version is much simpler. After receiving and moving to a set of coordinates, it only adds a random delay before receiving the next command.
+`RandomDelay.ino`: In contrast, this version is much simpler. After receiving and moving to a set of coordinates, it only adds a random delay before receiving the next command.
 <br></br>
+1. Open Arduino script what you want
+2. Connect the computer, Arduino Leonardo R3, and USB host shield together
+3. Set the board and port under the toos menu, then upload the Arduino script
+you can just use it if mouse works well
 <br></br>
 <br></br>
 <br></br>
