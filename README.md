@@ -27,7 +27,6 @@ it intentionally introduces a random delay and first moves to a nearby location 
 <br></br>
 <br></br>
 ### When the mouse doesn't work well
-<br></br>
 1. Open `Debug.ino` and upload it
 2. Press Ctrl + Shift + M and set them to Both NL&CR and 9600 baud rate
 3. Move the mouse and check the serial monitor
@@ -54,7 +53,6 @@ it intentionally introduces a random delay and first moves to a nearby location 
 <br></br>
 <br></br>
 ### 그래도 작동이 잘 되지 않을때
-<br></br>
 1. `Debug.ino` 파일을 열고 업로드하세요
 2. Ctrl + Shift + M 을 누르고 오른쪽 아래에 있는걸 Both NL & CR,  9600 보드레이트로 설정하세요
 3. 마우스를 움직이며 시리얼 모니터를 확인하세요
