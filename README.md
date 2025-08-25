@@ -34,11 +34,13 @@ it intentionally introduces a random delay and first moves to a nearby location 
 2. Open `Debug.ino` and upload it
 3. Press Ctrl + Shift + M and set them to Both NL&CR and 9600 baud rate
 4. Move the mouse and check the serial monitor
-5. The serial monitor will likely show something similar to 00 00 00 00 00 00 00 00. You need to figure out which byte changes, and to what number (octal or hexadecimal), when you press a specific mouse button
+5. The serial monitor will likely show something similar to `00 00 00 00 00 00 00 00`. You need to figure out which byte changes, and to what number (octal or hexadecimal), when you press a specific mouse button
 If your mouse's X, Y values are octal, you must change void onMouseMove(int16_t x, int16_t y, int8_t wheel) to int8_t x, int8_t y, and so on
 If the X buttons don't work, you'll need to change `#define MOUSE_NEXT` and `#define MOUSE_PREV` to the numbers that appear when XButton1 or XButton2 are pressed,
 like `#define MOUSE_NEXT (number when XButton2 is pressed)`, `#define MOUSE_PREV (number when XButton2 is pressed)`
 If the scroll wheel doesn't work well, you may need to modify .\hidmouserptparser.cpp, but it might be easier to get help from ChatGPT
+6. Once everything is working correctly, change `#define ENABLE_UHS_DEBUGGING 1` back to `#define ENABLE_UHS_DEBUGGING 0` in `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h`
+7. Upload `Debug.ino` again, and then upload the Arduino script file you want to use
 <br></br>
 
 ## KOR
@@ -69,10 +71,12 @@ If the scroll wheel doesn't work well, you may need to modify .\hidmouserptparse
 2. `Debug.ino` 파일을 열고 업로드하세요
 3. Ctrl + Shift + M 을 누르고 오른쪽 아래에 있는걸 Both NL & CR,  9600 보드레이트로 설정하세요
 4. 마우스를 움직이고 버튼을 누르면서 시리얼 모니터를 확인하세요
-5. 자 이제부터가 중요합니다. 시리얼 모니터가 `00 00 00 00 00 00 00 00`와 비슷하게 뜰텐데 마우스에서 어떤 버튼을 눌렀을때 몇 번째가 어떤 숫자로 바뀌는지, 8진수로 바뀌는지 16진수로 바뀌는지 알아내야합니다
+5. 자 이제부터가 중요합니다. 시리얼 모니터가 `00 00 00 00 00 00 00 00`과 비슷하게 뜰텐데 마우스에서 어떤 버튼을 눌렀을때 몇 번째가 어떤 숫자로 바뀌는지, 8진수인지 16진수인지를 알아내야합니다
 자신의 마우스의 x, y가 8진수라면 모든 `void onMouseMove(int16_t x, int16_t y, int8_t wheel)` 에서 `int8_t x`, `int8_t y` 이런식으로 바꾸거나
 X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 나오는 숫자)`, `#define MOUSE_PREV (XButton2을 눌렀을때 나오는 숫자))` 과 같이 해야하거나
 스크롤이 잘 먹히지 않는다면 `.\hidmouserptparser.cpp`를 변경하거나 해야하지만 ChatGPT에게 도움을 받는것이 편할수도 있습니다
+6. 이후에 모든것이 잘 작동한다면 다시 `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h` 에서 `#define ENABLE_UHS_DEBUGGING 1`을 `#define ENABLE_UHS_DEBUGGING 0`로 바꾸세요
+7. 다시 한 번 더 `Debug.ino`를 업로드한 뒤에 원하는 아두이노 스크립트 파일을 업로드하여 사용하시면 됩니다
 <br></br>
 <br></br>
 <br></br>
