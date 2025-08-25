@@ -64,7 +64,7 @@ If the scroll wheel doesn't work well, you may need to modify `ScrollValue` insi
 4. 마우스가 잘 작동된다면 성공!
 <br></br>
 <br></br>
-### 그래도 마우스가 잘 작동하지 않는다면면
+### 그래도 마우스가 잘 작동하지 않는다면
 1. `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h` 에서 `#define ENABLE_UHS_DEBUGGING 0`을 `#define ENABLE_UHS_DEBUGGING 1`로 바꾸세요
 2. `Debug.ino` 파일을 열고 업로드하세요
 3. Ctrl + Shift + M 을 누르고 오른쪽 아래에 있는걸 Both NL & CR,  9600 보드레이트로 설정하세요
