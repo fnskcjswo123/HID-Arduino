@@ -9,7 +9,7 @@ HID mouse emulation with Arduino + Usb HostShield!
 <br></br>
 - You will need [Arduino IDE version 1.8.19 or higher](https://www.arduino.cc/en/software)(This code was written for version 1.8.19 and might not work correctly on later versions but who cares)
 <br></br>
-- Download and unpack the repository archive to `C:\Users\your_username\Documents\Arduino\libraries\HID-Arduino`
+- Download and unpack the repository archive to `C:\Users\your_username\Documents\Arduino\libraries\HID-Arduino-HostShield`
 <br></br>
 - Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`
 <br></br>
@@ -49,7 +49,7 @@ If the scroll wheel doesn't work well, you may need to modify `ScrollValue` insi
 <br></br>
 - 아두이노 IDE 버전은 [1.8.19버전 이상](https://www.arduino.cc/en/software)(1.8.19버전에서 작성한거라 상위 버전에선 작동 안할수도 있음)이 필요합니다
   <br></br>
-- 파일을 다운받고 압축풀어서 `C:\Users\your_username\Documents\Arduino\libraries\HID-Arduino` 여기에 이렇게 저장해주세요
+- 파일을 다운받고 압축풀어서 `C:\Users\your_username\Documents\Arduino\libraries\HID-Arduino-HostShield` 여기에 이렇게 저장해주세요
 <br></br>
 - [이 파일](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0)을 다운받아 압축풀고 `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0` 여기에 이렇게 저장해주세요
 <br></br>
