@@ -71,42 +71,15 @@ If the scroll wheel doesn't work well, you may need to modify `ScrollValue` insi
 4. 마우스를 움직이고 버튼을 누르면서 시리얼 모니터를 확인하세요
 5. 자 이제부터가 중요합니다. 시리얼 모니터가 `00 00 00 00 00 00 00 00`과 비슷하게 뜰텐데 마우스에서 어떤 버튼을 눌렀을때 몇 번째가 어떤 숫자로 바뀌는지, 8진수인지 16진수인지를 알아내야합니다
 자신의 마우스의 x, y가 8진수라면 모든 `void onMouseMove(int16_t x, int16_t y, int8_t wheel)` 에서 `int8_t x`, `int8_t y` 이런식으로 바꾸거나
-X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2를 눌렀을때 나오는 숫자)`, `#define MOUSE_PREV (XButton1을 눌렀을때 나오는 숫자))` 과 같이 해야하거나
+X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 나오는 숫자)`, `#define MOUSE_PREV (XButton2을 눌렀을때 나오는 숫자))` 과 같이 해야하거나
 스크롤이 잘 먹히지 않는다면 `.\hidmouserptparser.cpp` 안에있는 `ScrollValue` 값을 변경하거나 해야하지만 챗지피티나 제미나이에게 도움을 받는것이 편할수도 있습니다
 6. 이후에 모든것이 잘 작동한다면 다시 `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h` 에서 `#define ENABLE_UHS_DEBUGGING 1`을 `#define ENABLE_UHS_DEBUGGING 0`로 바꾸세요
 7. 다시 한 번 더 `Debug.ino`를 업로드한 뒤에 원하는 아두이노 스크립트 파일을 업로드하여 사용하시면 됩니다
 <br></br>
 <br></br>
-## How to configure Delay Settings
-- In Arduino Script(C++), 1 == 1ms == 0.001sec / random(1, 11) == 1 ~ 10
-<br></br>
-`RandomDelay.ino`:
-if (Serial.available() > 0) {
-    String rawdata = Serial.readString();
-    String _x = split(rawdata, ',', 0);
-    String _y = split(rawdata, ',', 1);
-    String _m = split(rawdata, ',', 2);
-    if ((_x.length() > 0) && (_y.length() > 0) && (_m.length() > 0)) {
-      int x = _x.toInt();
-      int y = _y.toInt();
-      int m = _m.toInt();
-      Mouse.move(x, y);
-      delay(random(1,7));
-      if (m == 1) {
-        Mouse.press(MOUSE_LEFT);
-        Mouse.release(MOUSE_LEFT);
-
-- `delay(random(1,7));` Change this to your desired delay in seconds
-- `delay(random(1,7));`을 원하는 시간으로 바꾸면 됩니다 
-<br></br>
-`RandomDelay_RandomMove`:
-- Eng:
-- Kor:
-<br></br>
-<br></br>
 ## TroubleShooting
-- If the mouse's polling rate is very low, it may not work well
-- 마우스의 폴링레이트(hz)가 낮다면 잘 작동하지 않을 수 있습니다
+- If the mouse's polling rate(Hz) is very low, it may not work well
+- 마우스의 폴링레이트(Hz)가 낮다면 잘 작동하지 않을 수 있습니다
 <br></br>
 - If the Arduino script doesn't compile you must check that you're NOT using the Windows Store version of Arduino IDE and you are using the one from the link in the setup tutorial
 - 아두이노 스크립트가 컴파일되지 않는다면 윈도우 스토어 버전 아두이노 IDE를 사용하고 있는게 아닌지 확인하세요
@@ -115,17 +88,16 @@ if (Serial.available() > 0) {
 - 아두이노가 일반적으로 작동하는데 문제가 있다면, 다른 USB 케이블을 사용해보세요(아두이노 살 때 같이 동봉되서 오는 케이블을 사용하는걸 추천합니다)
 <br></br>
 - If this doesn't work, read it all over again slowly
-- 온갖짓을 했는데도 잘 작동하지 않는다면 이걸 다시 처음부터 천천히 읽어보세요 
+- 모든걸 다해봤는데도 잘 작동하지 않는다면 이걸 다시 처음부터 천천히 읽어보세요 
 <br></br>
 <br></br>
 ## FYI
 - The Arduino receives and processes the value sent by the PC in the format of `X,Y,Click_State`
 - 아두이노는 PC가 `X,Y,클릭상태` 처럼 주는 값을 받아 처리합니다
 <br></br>
+- In Arduino Script(C++), `1 == 1ms == 0.001sec / random(1, 10) == 1 ~ 9`, so be careful when setting delays
+- 아두이노 스크립트(C++)에선 `1 == 1ms == 0.001sec / random(1, 10) == 1 ~ 9` 이니 딜레이를 설정할때 주의하세요 
+<br></br>
 - [This site](https://gannonr.com/arduino/usb-host-shield) seems to simplify Arduino coding, but I am unsure of its effectiveness
 - [이 사이트](https://gannonr.com/arduino/usb-host-shield)를 사용하면 아두이노 코드를 쉽게 짤 수 있으나 잘 작동하는지는 모르겠네요
-<br></br>
-- I am not sure why but this works very well with [the program](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6) but who cares
-- 왜인지는 잘 모르겠으나 [이 프로그램](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6)과 매우 잘 작동합니다 진짜 머지
-<br></br>
 <br></br>
