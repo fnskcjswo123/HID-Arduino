@@ -91,12 +91,12 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 - 온갖짓을 했는데도 잘 작동하지 않는다면 이걸 다시 처음부터 천천히 읽어보세요 
 <br></br>
 <br></br>
-##Delay Settings
+## Delay Settings
 
 
 <br></br>
 <br></br>
-##FYI
+## FYI
 - The Arduino receives and processes the value sent by the PC in the format of `X,Y,Click_State`
 - 아두이노는 PC가 `X,Y,클릭상태` 처럼 주는 값을 받아 처리합니다
 <br></br>
