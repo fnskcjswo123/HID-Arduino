@@ -28,7 +28,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 4. you can just use it if mouse works well
 <br></br>
 <br></br>
-## My mouse isn't working tho!
+### My mouse isn't working tho!
 1. Change `#define ENABLE_UHS_DEBUGGING 0` to `#define ENABLE_UHS_DEBUGGING 1` in `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h`
 2. Open `Debug.ino` and upload it
 3. Press Ctrl + Shift + M and set them to Both NL&CR and 9600 baud rate
@@ -64,7 +64,7 @@ If the scroll wheel doesn't work well, you may need to modify `ScrollValue` insi
 4. 마우스가 잘 작동된다면 성공!
 <br></br>
 <br></br>
-## 그래도 마우스가 잘 작동하지 않는다면면
+### 그래도 마우스가 잘 작동하지 않는다면면
 1. `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h` 에서 `#define ENABLE_UHS_DEBUGGING 0`을 `#define ENABLE_UHS_DEBUGGING 1`로 바꾸세요
 2. `Debug.ino` 파일을 열고 업로드하세요
 3. Ctrl + Shift + M 을 누르고 오른쪽 아래에 있는걸 Both NL & CR,  9600 보드레이트로 설정하세요
@@ -78,13 +78,15 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 <br></br>
 <br></br>
 ## How to configure Delay Settings
+- In Arduino Script(C++), 1 == 1ms == 0.001sec
+<br></br>
 `RandomDelay.ino`:
-Eng:
-Kor:
+- Eng: 
+- Kor:
 <br></br>
 `RandomDelay_RandomMove`:
-Eng:
-Kor:
+- Eng:
+- Kor:
 <br></br>
 <br></br>
 ## TroubleShooting
