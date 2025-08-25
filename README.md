@@ -71,18 +71,33 @@ If the scroll wheel doesn't work well, you may need to modify `ScrollValue` insi
 4. 마우스를 움직이고 버튼을 누르면서 시리얼 모니터를 확인하세요
 5. 자 이제부터가 중요합니다. 시리얼 모니터가 `00 00 00 00 00 00 00 00`과 비슷하게 뜰텐데 마우스에서 어떤 버튼을 눌렀을때 몇 번째가 어떤 숫자로 바뀌는지, 8진수인지 16진수인지를 알아내야합니다
 자신의 마우스의 x, y가 8진수라면 모든 `void onMouseMove(int16_t x, int16_t y, int8_t wheel)` 에서 `int8_t x`, `int8_t y` 이런식으로 바꾸거나
-X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 나오는 숫자)`, `#define MOUSE_PREV (XButton2을 눌렀을때 나오는 숫자))` 과 같이 해야하거나
+X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2를 눌렀을때 나오는 숫자)`, `#define MOUSE_PREV (XButton1을 눌렀을때 나오는 숫자))` 과 같이 해야하거나
 스크롤이 잘 먹히지 않는다면 `.\hidmouserptparser.cpp` 안에있는 `ScrollValue` 값을 변경하거나 해야하지만 챗지피티나 제미나이에게 도움을 받는것이 편할수도 있습니다
 6. 이후에 모든것이 잘 작동한다면 다시 `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h` 에서 `#define ENABLE_UHS_DEBUGGING 1`을 `#define ENABLE_UHS_DEBUGGING 0`로 바꾸세요
 7. 다시 한 번 더 `Debug.ino`를 업로드한 뒤에 원하는 아두이노 스크립트 파일을 업로드하여 사용하시면 됩니다
 <br></br>
 <br></br>
 ## How to configure Delay Settings
-- In Arduino Script(C++), 1 == 1ms == 0.001sec
+- In Arduino Script(C++), 1 == 1ms == 0.001sec / random(1, 11) == 1 ~ 10
 <br></br>
 `RandomDelay.ino`:
-- Eng: 
-- Kor:
+if (Serial.available() > 0) {
+    String rawdata = Serial.readString();
+    String _x = split(rawdata, ',', 0);
+    String _y = split(rawdata, ',', 1);
+    String _m = split(rawdata, ',', 2);
+    if ((_x.length() > 0) && (_y.length() > 0) && (_m.length() > 0)) {
+      int x = _x.toInt();
+      int y = _y.toInt();
+      int m = _m.toInt();
+      Mouse.move(x, y);
+      delay(random(1,7));
+      if (m == 1) {
+        Mouse.press(MOUSE_LEFT);
+        Mouse.release(MOUSE_LEFT);
+
+- `delay(random(1,7));` Change this to your desired delay in seconds
+- `delay(random(1,7));`을 원하는 시간으로 바꾸면 됩니다 
 <br></br>
 `RandomDelay_RandomMove`:
 - Eng:
