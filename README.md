@@ -7,13 +7,15 @@ HID mouse emulation with Arduino + Usb HostShield!
 <br></br>
 - This code was designed for my Glorious Model O mouse, so if it doesn't work with yours, you will need to modify it according to the instructions below
 <br></br>
--You will need [Arduino IDE version 1.8.19 or higher](https://www.arduino.cc/en/software)(This code was written for version 1.8.19 and might not work correctly on later versions but who cares)
+- You will need [Arduino IDE version 1.8.19 or higher](https://www.arduino.cc/en/software)(This code was written for version 1.8.19 and might not work correctly on later versions but who cares)
 <br></br>
 - Download and unpack the repository archive to `C:\Users\your_username\Documents\Arduino\libraries\HID-Arduino`
 <br></br>
 - Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`
 <br></br>
 - Inside the file, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs.
+<br></br>
+- All Arduino script files are located in a folder that has the same name as the file itself
 <br></br>
 `RandomDelay_RandomMove.ino`: This script receives coordinates from a PC and performs a series of human-like movements. Instead of moving directly to the target coordinates,
 it intentionally introduces a random delay and first moves to a nearby location before moving to the final, specified coordinates. This staged movement is designed to mimic the unpredictable nature of human-like behavior
@@ -36,7 +38,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 If your mouse's X, Y values are octal, you must change void onMouseMove(int16_t x, int16_t y, int8_t wheel) to int8_t x, int8_t y, and so on
 If the X buttons don't work, you'll need to change `#define MOUSE_NEXT` and `#define MOUSE_PREV` to the numbers that appear when XButton1 or XButton2 are pressed,
 like `#define MOUSE_NEXT (number when XButton2 is pressed)`, `#define MOUSE_PREV (number when XButton2 is pressed)`
-If the scroll wheel doesn't work well, you may need to modify `.\hidmouserptparser.cpp`, but all of this might be easier to get help from ChatGPT or Gemini
+If the scroll wheel doesn't work well, you may need to modify .\hidmouserptparser.cpp, but it might be easier to get help from ChatGPT
 <br></br>
 
 ## KOR
@@ -49,6 +51,8 @@ If the scroll wheel doesn't work well, you may need to modify `.\hidmouserptpars
 - 파일을 다운받고 압축풀어서 `C:\Users\your_username\Documents\Arduino\libraries\HID-Arduino` 여기에 이렇게 저장해주세요
 <br></br>
 - [이 파일](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0)을 다운받아 압축풀고 `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0` 여기에 이렇게 저장해주세요
+<br></br>
+- 모든 아두이노 스크립트 파일은 해당 파일의 이름을 가지고 있는 폴더 안에 있습니다
 <br></br>
 - 파일 안에는 두가지 버전의 아두이노 스크립트가 있습니다. `RandomDelay_RandomMove.ino`는 PC로부터 좌표를 받고 움직이고 나서 다시 좌표를 받을때 일부러 무작위 딜레이를 걸며 PC에서 좌표가 보내질때 바로 그 좌표로 움직이지 않고
 그 주변으로 움직인뒤에 PC에서 보낸 좌표로 움직여 사람처럼 보이게 합니다. `RandomDelay.ino`는 좌표를 받고 움직이고나서 다시 좌표를 받을때 무작위 딜레이만 걸며 이 모든건 다 변경이 가능합니다 
@@ -68,7 +72,7 @@ If the scroll wheel doesn't work well, you may need to modify `.\hidmouserptpars
 5. 자 이제부터가 중요합니다. 시리얼 모니터가 `00 00 00 00 00 00 00 00`와 비슷하게 뜰텐데 마우스에서 어떤 버튼을 눌렀을때 몇 번째가 어떤 숫자로 바뀌는지, 8진수로 바뀌는지 16진수로 바뀌는지 알아내야합니다
 자신의 마우스의 x, y가 8진수라면 모든 `void onMouseMove(int16_t x, int16_t y, int8_t wheel)` 에서 `int8_t x`, `int8_t y` 이런식으로 바꾸거나
 X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 나오는 숫자)`, `#define MOUSE_PREV (XButton2을 눌렀을때 나오는 숫자))` 과 같이 해야하거나
-스크롤이 잘 먹히지 않는다면 `.\hidmouserptparser.cpp`를 변경하거나 해야하지만 위 모든건 챗지피티나 제미나이의 도움을 받는것이 편할수도 있습니다
+스크롤이 잘 먹히지 않는다면 `.\hidmouserptparser.cpp`를 변경하거나 해야하지만 ChatGPT에게 도움을 받는것이 편할수도 있습니다
 <br></br>
 <br></br>
 <br></br>
@@ -89,5 +93,3 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 - 온갖짓을 했는데도 잘 작동하지 않는다면 이걸 다시 처음부터 천천히 읽어보세요 
 <br></br>
 <br></br>
-<br></br>
-
