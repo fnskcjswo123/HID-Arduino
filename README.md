@@ -1,7 +1,7 @@
 ### HID Arduino Mouse
-<br></br>
+
 HID mouse emulation with Arduino + Usb HostShield!
-<br></br>
+
 ## ENG
 - before using this you need an `Arduino Leonardo R3 ATmega32u4` and `soldered Usb HostShield`
 <br></br>
@@ -28,7 +28,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 4. you can just use it if mouse works well
 <br></br>
 <br></br>
-### When the mouse doesn't work well
+## My mouse isn't working tho!
 1. Change `#define ENABLE_UHS_DEBUGGING 0` to `#define ENABLE_UHS_DEBUGGING 1` in `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h`
 2. Open `Debug.ino` and upload it
 3. Press Ctrl + Shift + M and set them to Both NL&CR and 9600 baud rate
@@ -64,7 +64,7 @@ If the scroll wheel doesn't work well, you may need to modify `ScrollValue` insi
 4. 마우스가 잘 작동된다면 성공!
 <br></br>
 <br></br>
-### 그래도 작동이 잘 되지 않을때
+## 그래도 마우스가 잘 작동하지 않는다면면
 1. `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h` 에서 `#define ENABLE_UHS_DEBUGGING 0`을 `#define ENABLE_UHS_DEBUGGING 1`로 바꾸세요
 2. `Debug.ino` 파일을 열고 업로드하세요
 3. Ctrl + Shift + M 을 누르고 오른쪽 아래에 있는걸 Both NL & CR,  9600 보드레이트로 설정하세요
@@ -75,6 +75,16 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 스크롤이 잘 먹히지 않는다면 `.\hidmouserptparser.cpp` 안에있는 `ScrollValue` 값을 변경하거나 해야하지만 챗지피티나 제미나이에게 도움을 받는것이 편할수도 있습니다
 6. 이후에 모든것이 잘 작동한다면 다시 `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h` 에서 `#define ENABLE_UHS_DEBUGGING 1`을 `#define ENABLE_UHS_DEBUGGING 0`로 바꾸세요
 7. 다시 한 번 더 `Debug.ino`를 업로드한 뒤에 원하는 아두이노 스크립트 파일을 업로드하여 사용하시면 됩니다
+<br></br>
+<br></br>
+## How to configure Delay Settings
+`RandomDelay.ino`:
+Eng:
+Kor:
+<br></br>
+`RandomDelay_RandomMove`:
+Eng:
+Kor:
 <br></br>
 <br></br>
 ## TroubleShooting
@@ -91,11 +101,6 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 - 온갖짓을 했는데도 잘 작동하지 않는다면 이걸 다시 처음부터 천천히 읽어보세요 
 <br></br>
 <br></br>
-## Delay Settings
-
-
-<br></br>
-<br></br>
 ## FYI
 - The Arduino receives and processes the value sent by the PC in the format of `X,Y,Click_State`
 - 아두이노는 PC가 `X,Y,클릭상태` 처럼 주는 값을 받아 처리합니다
@@ -103,5 +108,7 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 - [This site](https://gannonr.com/arduino/usb-host-shield) seems to simplify Arduino coding, but I am unsure of its effectiveness
 - [이 사이트](https://gannonr.com/arduino/usb-host-shield)를 사용하면 아두이노 코드를 쉽게 짤 수 있으나 잘 작동하는지는 모르겠네요
 <br></br>
-- I am not sure why but this works very well with [the program](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6)
-- 왜인지는 잘 모르겠으나 [이 프로그램](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6)과 매우 잘 작동합니다 진짜 머
+- I am not sure why but this works very well with [the program](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6) but who cares
+- 왜인지는 잘 모르겠으나 [이 프로그램](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6)과 매우 잘 작동합니다 진짜 머지
+<br></br>
+<br></br>
