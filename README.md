@@ -3,7 +3,7 @@
 HID mouse emulation with Arduino + Usb HostShield!
 
 ## ENG
-- before you begin, you need an `Arduino Leonardo R3 ATmega32u4` and `Soldered Usb HostShield`
+- before you begin, make sure you have an `Arduino Leonardo R3 ATmega32u4` with a `Soldered USB HostShield`
 <br></br>
 - This code was designed for my Glorious Model O Mouse, so if it doesn't work with yours, you will need to modify it according to the instructions below
 <br></br>
