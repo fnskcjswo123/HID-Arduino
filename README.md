@@ -3,7 +3,7 @@
 HID mouse emulation with Arduino + Usb HostShield!
 
 ## ENG
-- before using this you need an `Arduino Leonardo R3 ATmega32u4` and `Soldered Usb HostShield`
+- before you begin, you need an `Arduino Leonardo R3 ATmega32u4` and `Soldered Usb HostShield`
 <br></br>
 - This code was designed for my Glorious Model O Mouse, so if it doesn't work with yours, you will need to modify it according to the instructions below
 <br></br>
@@ -13,7 +13,7 @@ HID mouse emulation with Arduino + Usb HostShield!
 <br></br>
 - Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`
 <br></br>
-- Inside the file, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs.
+- Inside the repository, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs.
 <br></br>
 - All Arduino script files are located in a folder that has the same name as the file itself
 <br></br>
@@ -25,7 +25,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 1. Open Arduino script what you want
 2. Connect the computer, Arduino Leonardo R3, and USB host shield together
 3. Set the board and port under the toos menu, then upload the Arduino script
-4. you can just use it if mouse works well
+4. If your mouse works properly after upload, you are all set
 <br></br>
 <br></br>
 ### My mouse isn't working tho!
@@ -33,7 +33,7 @@ it intentionally introduces a random delay and first moves to a nearby location 
 2. Open `Debug.ino` and upload it
 3. Press `Ctrl + Shift + M` and set them to `Both NL & CR` and `9600 baud rate`
 4. Move the mouse and check the serial monitor
-5. The serial monitor will likely show something similar to `00 00 00 00 00 00 00 00`. You need to figure out which byte changes, and to what number (octal or hexadecimal), when you press a specific mouse button
+5. The serial monitor will typically display something like `00 00 00 00 00 00 00 00`. Observe which byte changes (and to what value, in octal or hexadecimal) when you press a specific mouse button
 If your mouse's X, Y values are octal, you must change void onMouseMove(int16_t x, int16_t y, int8_t wheel) to int8_t x, int8_t y, and so on
 If the X buttons don't work, you'll need to change `#define MOUSE_NEXT` and `#define MOUSE_PREV` to the numbers that appear when XButton1 or XButton2 are pressed,
 like `#define MOUSE_NEXT (number when XButton2 is pressed)`, `#define MOUSE_PREV (number when XButton2 is pressed)`
@@ -45,7 +45,7 @@ If the scroll wheel doesn't work well, you may need to modify `ScrollValue` insi
 ## KOR
 - 이건 제 글로리어스 모델 O 마우스 위주로 위주로 코딩한거라 사용자의 마우스에 따라 작동이 되지 않을 수 있으며 작동이 되지 않는다면 아래 나와있는대로 따로 코딩을 하셔야 합니다
 <br></br>
-- 이 코드를 사용하려면 `아두이노 레오나르도 R3 ATMEGA32U4`, `납땜한 아두이노 USB 호스트쉴드`가 필요합니다 없으면 납땜 가격포함 약 2만원정도로 그렇게 안비싸니 하나 사세요
+- 이 코드를 사용하려면 `아두이노 레오나르도 R3 ATMEGA32U4`, `납땜한 아두이노 USB 호스트쉴드`가 필요합니다 없으면 납땜 가격포함 약 2만원정도로 그렇게 안비싸니 하나 사시는걸 추천드려요
 <br></br>
 - 아두이노 IDE 버전은 [1.8.19버전 이상](https://www.arduino.cc/en/software)(1.8.19버전에서 작성한거라 상위 버전에선 작동 안할수도 있음)이 필요합니다
   <br></br>
