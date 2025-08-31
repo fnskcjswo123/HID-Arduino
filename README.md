@@ -1,6 +1,7 @@
 ### HID Arduino Mouse
 
 HID mouse emulation with Arduino + Usb HostShield!
+- Added new file InstankDragClick!
 
 ## ENG
 - before you begin, make sure you have an `Arduino Leonardo R3 ATmega32u4` with a `Soldered USB HostShield`
@@ -76,6 +77,11 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 스크롤이 잘 먹히지 않는다면 `.\hidmouserptparser.cpp` 안에있는 `ScrollValue` 값을 변경하거나 해야하지만 챗지피티나 제미나이에게 도움을 받는것이 편할수도 있습니다
 6. 이후에 모든것이 잘 작동한다면 다시 `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h` 에서 `#define ENABLE_UHS_DEBUGGING 1`을 `#define ENABLE_UHS_DEBUGGING 0`로 바꾸세요
 7. 다시 한 번 더 `Debug.ino`를 업로드한 뒤에 원하는 아두이노 스크립트 파일을 업로드하여 사용하시면 됩니다
+<br></br>
+<br></br>
+##ChangeLogs
+- Added a new file called `Serial_InstantDragClick` It lets you imitate drag clicking with both the left and right mouse buttons.
+- `Serial_InstatnDragClick` 이란 새 파일을 추가했습니다. 마우스 좌클릭, 우클릭을 꾹 눌러 드래그 클릭을 흉내낼 수 있습니다.
 <br></br>
 <br></br>
 ## TroubleShooting
