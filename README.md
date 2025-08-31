@@ -13,9 +13,9 @@ HID mouse emulation with Arduino + Usb HostShield!
 <br></br>
 - Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`
 <br></br>
-- Inside the repository, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs.
+- - All Arduino script files are located in a folder that has the same name as the file itself
 <br></br>
-- All Arduino script files are located in a folder that has the same name as the file itself
+- Inside the repository, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs(Check the update list as there may be other files in the latest version)
 <br></br>
 `RandomDelay_RandomMove.ino`: This script receives coordinates from a PC and performs a series of human-like movements. Instead of moving directly to the target coordinates,
 it intentionally introduces a random delay and first moves to a nearby location before moving to the final, specified coordinates. This staged movement is designed to mimic the unpredictable nature of human-like behavior
@@ -56,7 +56,8 @@ If the scroll wheel doesn't work well, you may need to modify `ScrollValue` insi
 - 모든 아두이노 스크립트 파일은 해당 파일의 이름을 가지고 있는 폴더 안에 있습니다
 <br></br>
 - 파일 안에는 두가지 버전의 아두이노 스크립트가 있습니다. `RandomDelay_RandomMove.ino`는 PC로부터 좌표를 받고 움직이고 나서 다시 좌표를 받을때 일부러 무작위 딜레이를 걸며 PC에서 좌표가 보내질때 바로 그 좌표로 움직이지 않고
-그 주변으로 움직인뒤에 PC에서 보낸 좌표로 움직여 사람처럼 보이게 합니다. `RandomDelay.ino`는 좌표를 받고 움직이고나서 다시 좌표를 받을때 무작위 딜레이만 걸며 이 모든건 다 변경이 가능합니다 
+그 주변으로 움직인뒤에 PC에서 보낸 좌표로 움직여 사람처럼 보이게 합니다. `RandomDelay.ino`는 좌표를 받고 움직이고나서 다시 좌표를 받을때 무작위 딜레이만 걸며 이 모든건 다 변경이 가능합니다
+최신 버전에선 다른 파일들도 있을 수 있으니 업데이트 목록을 확인하세요
 <br></br>
 1. 사용하고 싶은 아두이노 스크립트 파일을 여세요
 2. 아두이노 레오나르도 보드, 컴퓨터, USB 호스트쉴드를 서로 연결해주세요
