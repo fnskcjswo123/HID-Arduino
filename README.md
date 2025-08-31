@@ -79,7 +79,7 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 7. 다시 한 번 더 `Debug.ino`를 업로드한 뒤에 원하는 아두이노 스크립트 파일을 업로드하여 사용하시면 됩니다
 <br></br>
 <br></br>
-##ChangeLogs
+## ChangeLogs
 - Added a new file called `Serial_InstantDragClick` It lets you imitate drag clicking with both the left and right mouse buttons.
 - `Serial_InstatnDragClick` 이란 새 파일을 추가했습니다. 마우스 좌클릭, 우클릭을 꾹 눌러 드래그 클릭을 흉내낼 수 있습니다.
 <br></br>
