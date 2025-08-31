@@ -79,7 +79,7 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 <br></br>
 <br></br>
 ## ChangeLogs
-- Added a new file called `Serial_InstantDragClick` It lets you imitate drag clicking with both the left and right mouse buttons.
+- Added a new file called `Serial_InstantDragClick` It lets you imitate drag clicking with both the left and right mouse buttons. To use, upload a file and press left or right button.
 - `Serial_InstatnDragClick` 이란 새 파일을 추가했습니다. 마우스 좌클릭, 우클릭을 꾹 눌러 드래그 클릭을 흉내낼 수 있습니다.
 <br></br>
 <br></br>
