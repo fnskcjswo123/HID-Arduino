@@ -13,7 +13,7 @@ HID mouse emulation with Arduino + Usb HostShield!
 <br></br>
 - Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`
 <br></br>
-- - All Arduino script files are located in a folder that has the same name as the file itself
+- All Arduino script files are located in a folder that has the same name as the file itself
 <br></br>
 - Inside the repository, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs(Check the update list as there may be other files in the latest version)
 <br></br>
