@@ -3,47 +3,47 @@
 HID mouse emulation with Arduino + Usb HostShield!
 
 ## ENG
-- before you begin, make sure you have an `Arduino Leonardo R3 ATmega32u4` with a `Soldered USB HostShield`
+- before you begin, make sure you have an `Arduino Leonardo R3 ATmega32u4` with a `Soldered USB HostShield`.
 <br></br>
-- This code was designed for my Glorious Model O Mouse, so if it doesn't work with yours, you will need to modify it according to the instructions below
+- This code was designed for my Glorious Model O Mouse, so if it doesn't work with yours, you will need to modify it according to the instructions below.
 <br></br>
-- You will need [Arduino IDE version 1.8.19 or higher](https://www.arduino.cc/en/software)(This code was written for version 1.8.19 and might not work correctly on later versions)
+- You will need [Arduino IDE version 1.8.19 or higher](https://www.arduino.cc/en/software)(This code was written for version 1.8.19 and might not work correctly on later versions).
 <br></br>
-- Download and unpack the repository archive to `C:\Users\your_username\Documents\Arduino\libraries\HID-Arduino-HostShield`
+- Download and unpack the repository archive to `C:\Users\your_username\Documents\Arduino\libraries\HID-Arduino-HostShield`.
 <br></br>
-- Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`
+- Download and unpack [this archive](https://github.com/felis/USB_Host_Shield_2.0/releases/tag/1.7.0) into `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0`.
 <br></br>
-- All Arduino script files are located in a folder that has the same name as the file itself
+- All Arduino script files are located in a folder that has the same name as the file itself.
 <br></br>
-- Inside the repository, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs(Check the update list as there may be other files in the latest version)
+- Inside the repository, there are two versions of the Arduino script. All of these behaviors are fully adjustable and can be changed to suit your needs(Check the update list as there may be other files in the latest version).
 <br></br>
 `RandomDelay_RandomMove.ino`: This script receives coordinates from a PC and performs a series of human-like movements. Instead of moving directly to the target coordinates,
-it intentionally introduces a random delay and first moves to a nearby location before moving to the final, specified coordinates. This staged movement is designed to mimic the unpredictable nature of human-like behavior
+it intentionally introduces a random delay and first moves to a nearby location before moving to the final, specified coordinates. This staged movement is designed to mimic the unpredictable nature of human-like behavior.
 <br></br>
 `RandomDelay.ino`: In contrast, this version is much simpler. After receiving and moving to a set of coordinates, it only adds a random delay before receiving the next command.
 <br></br>
-1. Open Arduino script what you want
-2. Connect the computer, Arduino Leonardo R3, and USB host shield together
-3. Set the board and port under the toos menu, then upload the Arduino script
-4. If your mouse works properly after upload, you are all set
+1. Open Arduino script what you want.
+2. Connect the computer, Arduino Leonardo R3, and USB host shield together.
+3. Set the board and port under the toos menu, then upload the Arduino script.
+4. If your mouse works properly after upload, you are all set.
 <br></br>
 <br></br>
 ### My mouse isn't working tho!
-1. Change `#define ENABLE_UHS_DEBUGGING 0` to `#define ENABLE_UHS_DEBUGGING 1` in `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h`
-2. Open `Debug.ino` and upload it
-3. Press `Ctrl + Shift + M` and set them to `Both NL & CR` and `9600 baud rate`
-4. Move the mouse and check the serial monitor
-5. The serial monitor will typically display something like `00 00 00 00 00 00 00 00`. Observe which byte changes (and to what value, in octal or hexadecimal) when you press a specific mouse button
+1. Change `#define ENABLE_UHS_DEBUGGING 0` to `#define ENABLE_UHS_DEBUGGING 1` in `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h`.
+2. Open `Debug.ino` and upload it.
+3. Press `Ctrl + Shift + M` and set them to `Both NL & CR` and `9600 baud rate`.
+4. Move the mouse and check the serial monitor.
+5. The serial monitor will typically display something like `00 00 00 00 00 00 00 00`. Observe which byte changes (and to what value, in octal or hexadecimal) when you press a specific mouse button.
 If your mouse's X, Y values are octal, you must change void onMouseMove(int16_t x, int16_t y, int8_t wheel) to int8_t x, int8_t y, and so on
 If the X buttons don't work, you'll need to change `#define MOUSE_NEXT` and `#define MOUSE_PREV` to the numbers that appear when XButton1 or XButton2 are pressed,
-like `#define MOUSE_NEXT (number when XButton2 is pressed)`, `#define MOUSE_PREV (number when XButton2 is pressed)`
-If the scroll wheel doesn't work well, you may need to modify `ScrollValue` inside `.\hidmouserptparser.cpp`, but it might be easier to get help from ChatGPT or Gemini
-6. Once everything is working correctly, change `#define ENABLE_UHS_DEBUGGING 1` back to `#define ENABLE_UHS_DEBUGGING 0` in `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h`
-7. Upload `Debug.ino` again, and then upload the Arduino script file you want to use
+like `#define MOUSE_NEXT (number when XButton2 is pressed)`, `#define MOUSE_PREV (number when XButton2 is pressed)`.
+If the scroll wheel doesn't work well, you may need to modify `ScrollValue` inside `.\hidmouserptparser.cpp`, but it might be easier to get help from ChatGPT or Gemini.
+6. Once everything is working correctly, change `#define ENABLE_UHS_DEBUGGING 1` back to `#define ENABLE_UHS_DEBUGGING 0` in `C:\Users\your_username\Documents\Arduino\libraries\USB_Host_Shield_2.0-1.7.0\settings.h`.
+7. Upload `Debug.ino` again, and then upload the Arduino script file you want to use.
 <br></br>
 <br></br>
 ## KOR
-- 이건 제 글로리어스 모델 O 마우스 위주로 위주로 코딩한거라 사용자의 마우스에 따라 작동이 되지 않을 수 있으며 작동이 되지 않는다면 아래 나와있는대로 따로 코딩을 하셔야 합니다
+- 이건 제 글로리어스 모델 O 마우스 위주로 위주로 코딩한거라 사용자의 마우스에 따라 작동이 되지 않을 수 있으며 작동이 되지 않는다면 아래 나와있는대로 따로 코딩을 하셔야 합니다.
 <br></br>
 - 이 코드를 사용하려면 `아두이노 레오나르도 R3 ATMEGA32U4`, `납땜한 아두이노 USB 호스트쉴드`가 필요합니다 없으면 납땜 가격포함 약 2만원정도로 그렇게 안비싸니 하나 사시는걸 추천드려요
 <br></br>
