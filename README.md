@@ -1,7 +1,6 @@
 ### HID Arduino Mouse
 
 HID mouse emulation with Arduino + Usb HostShield!
-- Added new file InstankDragClick!
 
 ## ENG
 - before you begin, make sure you have an `Arduino Leonardo R3 ATmega32u4` with a `Soldered USB HostShield`
