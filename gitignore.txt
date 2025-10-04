@@ -1,0 +1,82 @@
+# Object files, libraries and binaries
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Static libraries and archives
+*.a
+*.lib
+
+# Compiled intermediates, coverage
+*.gcno
+*.gcda
+*.prof
+*.profraw
+
+# Build directories (common names)
+build/
+bin/
+obj/
+dist/
+out/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CMakeLists.txt.user
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# Meson / Ninja
+meson-logs/
+meson.build/
+.ninja_deps
+.ninja_log
+
+# IDEs/editors
+.vscode/
+.idea/
+*.iml
+*.suo
+*.user
+*.userosscache
+*.sln
+*.vcxproj*
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserdata/
+
+# Debug / temp
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Package manager caches
+.vcpkg_installed/
+packages/
+
+# Third-party / dependency binaries (if you keep them out of repo)
+third_party/
+external/
+vendor/
+
+# Git LFS attribute file
+.gitattributes
