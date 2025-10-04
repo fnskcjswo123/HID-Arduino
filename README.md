@@ -108,5 +108,5 @@ X버튼이 먹히지 않는다면 `#define MOUSE_NEXT (XButton2을 눌렀을때 
 - [이 사이트](https://gannonr.com/arduino/usb-host-shield)를 사용하면 아두이노 코드를 쉽게 짤 수 있으나 잘 작동하는지는 모르겠네요
 <br></br>
 - I don't know why, but it works well with [this program](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6) but who cares
-- [이 프로그램](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6)과 잘 작동합니다 왜인지는 나도 몰루?
+- 의도한 건 아니지만 [이 프로그램](https://github.com/Seconb/Aimmy-Arduino-Edition/releases/tag/v6)과 잘 작동합니다 왜인지는 나도 몰루?
 <br></br>
